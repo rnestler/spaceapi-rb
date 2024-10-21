@@ -8,6 +8,8 @@ class TestSpaceapi < Minitest::Test
   end
 
   def test_it_does_something_useful
-    assert false
+    assert_raises do
+      Spaceapi.status_from_string("{}")
+    end
   end
 end
